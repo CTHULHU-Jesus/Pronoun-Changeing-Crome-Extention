@@ -17,6 +17,7 @@ async function main(){
         ( { target: { tabId: tab.id }
           , files: ['changePronouns.js']});
   } catch (e) {
+    console.log("can't send the same file twice. That would be silly.");
   }
 
   heHim = function() {
@@ -45,7 +46,10 @@ async function main(){
       reflexive:  "themself"});
   }
   document.getElementById("they/them").addEventListener('click', theyThem);
-
 }
 
-window.onload=main;
+try{
+  window.onload=main;
+} catch (e) {
+  console.log("error:", e);
+}

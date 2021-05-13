@@ -12,9 +12,6 @@
     "48": "./imgs/48x48.png",
     "128": "./imgs/128x128.png"
   },
-  "background": {
-    "service_worker" : "background.js"
-  },
   "permissions": [ "activeTab"
                  , "scripting" ]
 }
