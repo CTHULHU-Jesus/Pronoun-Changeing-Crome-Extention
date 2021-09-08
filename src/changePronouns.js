@@ -20,18 +20,10 @@ const change_pronouns = ( nominative
   // It's Dumb that javascript doesn't have this by default
   const zip = (a, b) => Array.from(Array(Math.min(b.length, a.length)), (_, i) => [a[i], b[i]]);
 
-  // Generate all of the cases where words have punctuation
-  // around them
+  // Generate all of the cases where words have Capitalization 
+  // and not
   function to_all_cases(inital) {
     var new_cases = [];
-    const punctuation_or_space = [ "\\.", " "
-                                 , ",", "\\?"
-                                 , "!", "¿"
-                                 , "¡", "\""
-                                 , "\'", "\\:"
-                                 , ";", "<"
-                                 , ">", "\\("
-                                 , "\\)", "-" ];
     var lower = inital.toLowerCase();
     var upper = lower[0].toUpperCase() + lower.substring(1);
     [ lower, upper ].forEach(y_case => {
